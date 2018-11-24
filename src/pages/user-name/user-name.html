@@ -1,0 +1,23 @@
+<!--
+  Generated template for the UserNamePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>user-name</ion-title>
+    <ion-buttons>
+      <button ion-button (click)="resetGame()" end >Reset</button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-input type="text" [(ngModel)]="ngUsername" placeholder="Please enter your username" ></ion-input>
+  <button ion-button (click)="checkFreeSlot()" >Enter</button>
+</ion-content>

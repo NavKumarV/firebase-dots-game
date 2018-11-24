@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Dots
+    </ion-title>
+    <!--<ion-buttons>
+      <button ion-button icon-only>
+        <ion-icon name="options"></ion-icon>
+      </button>
+      <button ion-button>
+        O={{player1Count}}
+      </button>
+      <button ion-button>
+        X={{player2Count}}
+      </button>
+    </ion-buttons>-->
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h3 *ngIf="user1Turn"> Player O turn </h3>
+  <h3 *ngIf="user2Turn"> Player X turn </h3>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        player 1<br>
+        {{player1}}<br>
+        {{player1Count}}
+      </ion-col>
+      <ion-col>
+        player 2<br>
+        {{player2}}<br>
+        {{player2Count}}
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row *ngFor="let i of buttonArray1Count; let j= index">
+      <ion-col>
+        <div></div><br>
+        <button *ngIf="j < (arrayLength-1)" id="container_2_red" style="height:10px; width:100%" [disabled]="(i[0].clicked)" (click)=markLine(i[0])
+          ion-button></button>
+      </ion-col>
+
+      <ion-col>
+        <button class="red" style="height:10px; width:100%" [disabled]="(i[1].clicked)" (click)=markLine(i[1]) ion-button></button><br>
+        <div style="padding-left: 15px;">
+          <ion-icon *ngIf="i[1].val =='X'" name="close"></ion-icon>
+          <ion-icon *ngIf="i[1].val =='O'" name="radio-button-off"></ion-icon>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div></div><br>
+        <button *ngIf="j < (arrayLength-1)" id=container_2_red style="height:10px; width:100%" [disabled]="(i[2].clicked)" (click)=markLine(i[2])
+          ion-button></button>
+      </ion-col>
+
+      <ion-col>
+        <button class="red" style="height:10px; width:100%" [disabled]="(i[3].clicked)" (click)=markLine(i[3]) ion-button></button><br>
+        <div style="padding-left: 15px;">
+          <ion-icon *ngIf="i[3].val =='X'" name="close"></ion-icon>
+          <ion-icon *ngIf="i[3].val =='O'" name="radio-button-off"></ion-icon>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div></div><br>
+        <button *ngIf="j < (arrayLength-1)" id=container_2_red style="height:10px; width:100%" [disabled]="(i[4].clicked)" (click)=markLine(i[4])
+          ion-button></button>
+      </ion-col>
+
+      <ion-col>
+        <button class="red" style="height:10px; width:100%" [disabled]="(i[5].clicked)" (click)=markLine(i[5]) ion-button></button><br>
+        <div style="padding-left: 15px;">
+          <ion-icon *ngIf="i[5].val =='X'" name="close"></ion-icon>
+          <ion-icon *ngIf="i[5].val =='O'" name="radio-button-off"></ion-icon>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div></div><br>
+        <button *ngIf="j < (arrayLength-1)" id=container_2_red style="height:10px; width:100%" [disabled]="(i[6].clicked)" (click)=markLine(i[6])
+          ion-button></button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
