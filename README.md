@@ -7,6 +7,6 @@ This is a game which I used to play in school days, where we used to keep dots i
 
 
 ## Note: 
-      1 Download all the files and then open the cmd prompt in root directory, type "npm install".
+      1 Download all the files and then open the cmd prompt in root directory, type 'npm install'.
       2 Use your own google firebase key, since the one which I have used in the project might be expired.
 
